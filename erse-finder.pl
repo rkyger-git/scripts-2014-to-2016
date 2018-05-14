@@ -1,5 +1,5 @@
 # file: erse-finder.pl
-# This script was used for a school project to find ERSE's in gene promoters using data form the Eukaryotic Promoter Database (EPD).   
+# This script was used for a school project to find ERSE's in gene promoters using data from the Eukaryotic Promoter Database (EPD).   
 # Originally written back in 2016 
 
 while ($_ = readline) {

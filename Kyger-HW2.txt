@@ -1,0 +1,40 @@
+Homework 2	Ryan Kyger
+Due 9am, 9/15/16
+
+Please put all your answers in a single file, with the question number followed by the whole command (beginning with “perl –e …”)
+
+1.  Write a perl script to create a file called ‘HW2file’ containing the following information about the yeast gene YJR151W-A (the spaces are ‘tabs’:
+
+YJR151W-A	+	chr10		717570..717620
+
+Now run the command (create the file).
+
+perl -e 'print “YJR151W-A	+	chr10	717570..717620”' > HW2file
+
+
+2.  Write a perl script that reads in a line like the one above and prints out the strand (+ or -)
+
+perl -e '$_ = readline; print $1 if /(.\t)+/; print "\n"' HW2file
+
+
+3.  Write a perl script that reads in a line like the one above and prints out the chromosome number (i.e., whatever number is after ‘chr’)
+
+perl -e '$_ = readline; print $1 if /chr(\d+)/; print "\n"' HW2file
+
+
+4.  Write a perl script that reads in a line like the one above and prints out the gene name (whatever is the first series of non-space characters).
+
+perl -ane 'print $F[0]; print "\n"' HW2file
+
+
+5.  Write a perl script that reads in a line like the one above and prints out the beginning coordinate, a tab, and then the ending coordinate.
+
+perl -ane 'print $F[3]; print "\n"' HW2file
+
+Note: This code was the best I could do. My goal was replace the replace periods (..) with a tab (\t) and then tell perl to print $F[3] (output: 717570), print a tab (\t), and then print $F[4] (output: 717620). I tried 5 to 6 different ways to try to accomplish this. 
+
+
+6.  How long did this assignment take you?
+
+ ~2.5 hours
+

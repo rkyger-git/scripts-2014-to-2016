@@ -1,0 +1,6 @@
+xvec = c(1:12)
+yvec = c(1:12)
+plot(xvec,yvec)
+barplot(xvec, horiz = TRUE)
+xybind = rbind(xvec,yvec)
+barplot(xybind)
